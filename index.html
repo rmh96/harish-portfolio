@@ -1,0 +1,110 @@
+<!-- Hi This is Harish RM, I'm Happy because you are looking into my code!! -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" type="x-icon" href="h-icon.png" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <title>Harish | Portfolio</title>
+  </head>
+  <body>
+    <!-- Cursor Effect Testing
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div> -->
+    <nav
+      class="sticky relative top-0 z-50 py-5 w-full flex items-center justify-between px-10 text-white text-2xl"
+    >
+      <div class="font-semibold logo"><a href="#main">R M H</a></div>
+      <div class="font-semibold nav-options">
+        <ul class="flex space-x-4">
+          <li class="border-b-0 hover:border-b border-white">
+            <a href="#about">About Me</a>
+          </li>
+          <li class="border-b-0 hover:border-b border-white">
+            <a href="#skills">Skills</a>
+          </li>
+          <li class="border-b-0 hover:border-b border-white">
+            <a href="#exp">Experience</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="scroll-watcher"></div>
+    <div
+      id="main"
+      class="h-screen w-full bg-sky-400 flex items-center justify-center text-white"
+    >
+      <div
+        id="main-con"
+        class="w-1/2 h-1/2 flex flex-col space-y-7 justify-center items-center overflow-hidden"
+      >
+        <span class="text-xl -translate-x-full opacity-0">Hello, I'm</span>
+        <div class="text-7xl tracking-widest translate-x-full opacity-0">
+          Harish
+        </div>
+        <div class="text-3xl flex space-x-2 roles opacity-0">
+          <span></span>
+        </div>
+        <button
+          id="btn-loading"
+          class="opacity-0 relative text-xl mt-10 p-3 border-2 rounded-full hover:bg-white hover:text-sky-400 hover:transform hover:scale-105 transition-transform"
+        >
+          Download Resume
+        </button>
+      </div>
+    </div>
+    <div class="h-screen w-full bg-blue-300 text-white" id="about">
+      <div
+        id="about-con"
+        class="pt-20 border flex flex-col justify-center items-center"
+      >
+        <span class="text-xl">Get to know more</span>
+        <div class="text-7xl">About Me</div>
+      </div>
+      <div
+        class="border mt-10 flex justify-center space-x-2 items-center card-con"
+      >
+        <div class="card">Blah Blah</div>
+        <div class="card">Anime Lover</div>
+        <div class="card">Game Lover</div>
+        <div class="card">Trying to be Fix</div>
+      </div>
+    </div>
+    <div class="h-screen w-full bg-blue-400 text-white" id="skills">
+      <div
+        id="about-con"
+        class="pt-20 flex flex-col justify-center items-center"
+      >
+        <span class="text-xl">Explore my</span>
+        <div class="text-7xl">Skill Sets</div>
+      </div>
+    </div>
+    <div class="h-screen w-full bg-blue-500 text-white" id="exp">
+      <div
+        id="about-con"
+        class="pt-20 flex flex-col justify-center items-center"
+      >
+        <span class="text-xl">Browser my project</span>
+        <div class="text-7xl">Experience</div>
+      </div>
+    </div>
+    <script defer type="text/javascript" src="./index.js"></script>
+  </body>
+</html>

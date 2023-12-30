@@ -1,0 +1,205 @@
+/* cursor css */
+/* .circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+/* Main Page CSS */
+
+nav {
+  letter-spacing: 0.12em;
+  background-color: rgb(56 189 248);
+}
+
+.scroll-watcher {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  transform-origin: left;
+  scale: 0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+
+.greeting {
+  opacity: 0;
+  transform: translateX(-500%);
+  animation: slidingX 3s forwards 0.5s;
+}
+
+@keyframes slidingX {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.roles span {
+  position: relative;
+}
+
+.roles span::before {
+  content: "a Front End Developer";
+  color: white;
+  animation: my-roles 8s infinite;
+}
+
+.roles span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: rgb(56 189 248);
+  border-left: 2px solid white;
+  right: -8px;
+  animation: blinks 0.7s linear infinite, typing 15s steps(14) infinite;
+}
+
+@keyframes my-roles {
+  0%,
+  45% {
+    content: "an UI Developer";
+  }
+  46%,
+  75% {
+    content: "a Front End Developer";
+  }
+  76%,
+  100% {
+    content: "a React Developer";
+  }
+}
+
+@keyframes blinks {
+  to {
+    border-left: 2px solid royalblue;
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85%,
+  100% {
+    width: calc(100% + 8px);
+  }
+}
+
+.btn-loading::before {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  opacity: 1;
+  animation: loading-move 2s ease-in-out;
+  margin-bottom: 10px;
+}
+
+@keyframes loading-move {
+  0% {
+    color: rgb(56 189 248);
+    content: "20%";
+    width: 20%;
+  }
+  50% {
+    color: rgb(56 189 248);
+    content: "60%";
+    width: 60%;
+  }
+  75% {
+    color: rgb(56 189 248);
+    opacity: 1;
+    content: "100%";
+    width: 100%;
+  }
+  85% {
+    color: rgb(56 189 248);
+    opacity: 1;
+    content: "Done";
+    width: 100%;
+  }
+  90% {
+    color: rgb(56 189 248);
+    opacity: 1;
+    content: "Done";
+    width: 100%;
+  }
+  95% {
+    width: 100%;
+    content: "Done";
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+/* Responsive Media Queries */
+
+@media (max-width: 600px) {
+  /* Adjust styles for small screens */
+  #main {
+    padding-bottom: 10%;
+  }
+  .logo {
+    display: none;
+  }
+  .nav-options {
+    height: 100%;
+    width: 100%;
+  }
+  .nav-options ul {
+    justify-content: center;
+  }
+  #main-con {
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  /* Adjust styles for medium-sized screens */
+}
+
+@media (min-width: 901px) {
+  /* Adjust styles for larger screens */
+}
+
+/* About Me CSS */

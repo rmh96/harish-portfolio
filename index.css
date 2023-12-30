@@ -34,12 +34,6 @@ nav {
   }
 }
 
-.greeting {
-  opacity: 0;
-  transform: translateX(-500%);
-  animation: slidingX 3s forwards 0.5s;
-}
-
 @keyframes slidingX {
   to {
     opacity: 1;
@@ -172,17 +166,55 @@ nav {
   }
 }
 
+/* About Me CSS */
+
+.card {
+  height: 100%;
+  width: 100px;
+  border-radius: 50px;
+  background-image: var(--imgbg);
+  transition: width 0.5s linear;
+  overflow: hidden;
+  position: relative;
+}
+
+.card > div {
+  font-size: 2rem;
+  writing-mode: vertical-lr;
+  scale: -1;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+.card:hover {
+  width: 450px;
+  /* filter: blur(2px); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.card:hover > div {
+  color: red;
+}
+
+/* ........... */
+
 /* Responsive Media Queries */
 
 @media (max-width: 600px) {
   /* Adjust styles for small screens */
   #main {
-    padding-bottom: 10%;
+    padding-bottom: 40%;
   }
   .logo {
     display: none;
   }
+  nav {
+    padding: 0.75rem;
+  }
   .nav-options {
+    font-size: 17px;
     height: 100%;
     width: 100%;
   }
@@ -191,6 +223,29 @@ nav {
   }
   #main-con {
     width: 100%;
+  }
+  /* About css */
+  .card-con {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20%;
+  }
+  .card {
+    height: 50%;
+    width: 40%;
+    border-radius: 50px;
+    background-image: var(--imgbg);
+    transform: translateX(-100%);
+    animation: slidingX 1.5s both;
+    opacity: 0;
+  }
+  .card > div {
+    font-size: 1.2rem;
+    writing-mode: horizontal-tb;
+    scale: 1;
+    position: absolute;
+    top: 20%;
+    left: 20%;
   }
 }
 
@@ -201,5 +256,3 @@ nav {
 @media (min-width: 901px) {
   /* Adjust styles for larger screens */
 }
-
-/* About Me CSS */

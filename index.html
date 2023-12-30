@@ -16,7 +16,7 @@
     />
     <meta name="author" content="Harish RM" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" type="x-icon" href="h-icon.png" />
+    <link rel="shortcut icon" type="x-icon" href="./images/h-icon.png" />
     <link rel="stylesheet" href="./index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,21 +79,32 @@
         </button>
       </div>
     </div>
-    <div class="h-screen w-full bg-blue-300 text-white" id="about">
+    <div
+      class="h-screen border w-full flex flex-col items-center bg-blue-300 text-white"
+      id="about"
+    >
       <div
         id="about-con"
-        class="pt-20 border flex flex-col justify-center items-center"
+        class="pt-20 flex flex-col justify-center items-center"
       >
         <span class="text-xl">Get to know more</span>
         <div class="text-7xl">About Me</div>
       </div>
       <div
-        class="border mt-10 flex justify-center space-x-2 items-center card-con"
+        class="mt-20 flex justify-center space-x-4 items-center card-con h-3/5"
       >
-        <div class="card">Blah Blah</div>
-        <div class="card">Anime Lover</div>
-        <div class="card">Game Lover</div>
-        <div class="card">Trying to be Fix</div>
+        <div class="card shadow-xl" style="--imgbg: url('images/image-1.jpg')">
+          <div class="card-title">Blah Blah</div>
+        </div>
+        <div class="card shadow-xl" style="--imgbg: url('images/image-2.jpeg')">
+          <div class="card-title">Anime Lover</div>
+        </div>
+        <div class="card shadow-xl" style="--imgbg: url('images/image-3.jpeg')">
+          <div class="card-title">Game Lover</div>
+        </div>
+        <div class="card shadow-xl" style="--ex: white">
+          <div class="card-title">Trying to be Fix</div>
+        </div>
       </div>
     </div>
     <div class="h-screen w-full bg-blue-400 text-white" id="skills">

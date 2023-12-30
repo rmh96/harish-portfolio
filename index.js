@@ -48,18 +48,18 @@ window.addEventListener("scroll", () => {
     nav.style.backgroundColor = getBgStyleValue(main);
   }
   if (
-    scrollY >= about.offsetTop &&
+    scrollY >= about.offsetTop - nav.offsetHeight &&
     scrollY < about.offsetTop + commonHeightOfSections
   ) {
     nav.style.backgroundColor = getBgStyleValue(about);
   }
   if (
-    scrollY >= skills.offsetTop &&
+    scrollY >= skills.offsetTop - nav.offsetHeight &&
     scrollY < skills.offsetTop + commonHeightOfSections
   ) {
     nav.style.backgroundColor = getBgStyleValue(skills);
   }
-  if (scrollY >= skills.offsetTop + commonHeightOfSections) {
+  if (scrollY >= skills.offsetTop + commonHeightOfSections - nav.offsetHeight) {
     nav.style.backgroundColor = getBgStyleValue(exp);
   }
 });

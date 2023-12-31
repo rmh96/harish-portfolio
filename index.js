@@ -111,7 +111,6 @@ const cardCon = document.querySelector(".card-con");
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      console.log("####", entry.isIntersecting);
       entry.isIntersecting
         ? entry.target.classList.add("bring-card-con")
         : entry.target.classList.remove("bring-card-con");
@@ -120,3 +119,30 @@ const observer = new IntersectionObserver(
   { threshold: 0.5 }
 );
 observer.observe(cardCon);
+
+//skill section js
+const imgBxs = document.querySelectorAll(".skillImgBx");
+imgBxs.forEach((imgBx) => {
+  imgBx.addEventListener("click", () => {
+    imgBxs.forEach((imgBxT) => {
+      imgBxT.classList.remove("active");
+    });
+    imgBx.classList.add("active");
+    const imgBxCon = imgBx.getAttribute("data-name");
+    document.querySelector(".skill-content").textContent = imgBxCon;
+  });
+});
+
+const skillObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      entry.isIntersecting && entry.target.classList.add("icons-circles");
+    });
+  },
+  { threshold: 0.5 }
+);
+
+imgBxs.forEach((imgBx) => {
+  skillObserver.observe(imgBx);
+});

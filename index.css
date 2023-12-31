@@ -226,8 +226,86 @@ nav {
   scale: 1;
 }
 
-/* ........... */
+/* Skills Section CSS */
 
+.skill-con {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border: 1px solid white;
+  border-radius: 50%;
+  /* animation: roll 30s linear infinite; */
+  transform-style: preserve-3d;
+}
+
+@keyframes roll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.skill-icons {
+  position: relative;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillImgBx {
+  width: 70px;
+  height: 70px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  overflow: hidden;
+  transition: 1s;
+  z-index: 50;
+  overflow: hidden;
+  filter: grayscale(0.4);
+}
+
+.icons-circles {
+  transform: rotate(calc(360deg / 6 * var(--i)));
+  transform-origin: 340px center;
+}
+
+.skillImgBx.active {
+  border: 5px solid blue;
+  filter: grayscale(0);
+}
+
+.skillImgBx > img {
+  object-fit: cover;
+  transform: rotate(calc(-360deg / 6 * var(--i)));
+}
+
+.skill-content {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  bottom: 100px;
+  right: 100px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  transform-style: flat;
+}
+
+/* ........... */
 /* Responsive Media Queries */
 
 @media (max-width: 600px) {
@@ -290,6 +368,33 @@ nav {
     position: absolute;
     top: 25%;
     padding: 0 8px 0 8px;
+  }
+
+  /* skills css mobile */
+
+  .skill-con {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+
+  .skillImgBx {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icons-circles {
+    transform: rotate(calc(360deg / 6 * var(--i)));
+    transform-origin: 245px center;
+  }
+
+  .skill-content {
+    top: 100px;
+    left: 100px;
+    bottom: 100px;
+    right: 100px;
   }
 }
 

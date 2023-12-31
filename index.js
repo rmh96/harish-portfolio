@@ -48,19 +48,19 @@ window.addEventListener("scroll", () => {
     nav.style.backgroundColor = getBgStyleValue(main);
   }
   if (
-    scrollY >= about.offsetTop - nav.offsetHeight &&
-    scrollY < about.offsetTop + commonHeightOfSections
-  ) {
-    nav.style.backgroundColor = getBgStyleValue(about);
-  }
-  if (
     scrollY >= skills.offsetTop - nav.offsetHeight &&
     scrollY < skills.offsetTop + commonHeightOfSections
   ) {
     nav.style.backgroundColor = getBgStyleValue(skills);
   }
-  if (scrollY >= skills.offsetTop + commonHeightOfSections - nav.offsetHeight) {
+  if (
+    scrollY >= exp.offsetTop - nav.offsetHeight &&
+    scrollY < exp.offsetTop + commonHeightOfSections
+  ) {
     nav.style.backgroundColor = getBgStyleValue(exp);
+  }
+  if (scrollY >= exp.offsetTop + commonHeightOfSections - nav.offsetHeight) {
+    nav.style.backgroundColor = getBgStyleValue(about);
   }
 });
 
@@ -105,3 +105,18 @@ const scrollTopValueSet = () => {
 };
 scrollTopValueSet();
 window.addEventListener("resize", scrollTopValueSet);
+
+//about page intersectionObserver in mobile view
+const cardCon = document.querySelector(".card-con");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      console.log("####", entry.isIntersecting);
+      entry.isIntersecting
+        ? entry.target.classList.add("bring-card-con")
+        : entry.target.classList.remove("bring-card-con");
+    });
+  },
+  { threshold: 0.5 }
+);
+observer.observe(cardCon);

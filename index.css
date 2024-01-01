@@ -320,6 +320,17 @@ nav {
 @media (max-width: 500px) {
   /* Adjust styles for larger screens */
 
+  /* common changes */
+  .section-title {
+    font-size: 48px;
+  }
+
+  .section-sub-title {
+    font-size: 15px;
+  }
+
+  /* Nav section css */
+
   nav {
     position: sticky;
     top: 0;
@@ -389,7 +400,9 @@ nav {
   }
 
   /* skills css mobile */
-
+  #skills {
+    row-gap: 60px;
+  }
   .skill-con {
     position: relative;
     width: 300px;

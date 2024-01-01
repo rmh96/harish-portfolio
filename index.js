@@ -112,7 +112,7 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.style.transform = "translateX(-20%)";
+        entry.target.style.transform = "translateX(-10%)";
         entry.target.classList.add("bring-card-con");
       }
     });

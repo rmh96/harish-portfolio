@@ -320,23 +320,26 @@ nav {
 @media (max-width: 500px) {
   /* Adjust styles for larger screens */
 
-  .logo {
-    display: flex;
-    justify-content: start;
-    width: 25%;
-    font-size: 16px;
-    border-right: 1px solid white;
-  }
   nav {
     position: sticky;
     top: 0;
     z-index: 100;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .logo {
+    display: flex;
+    justify-content: start;
+    padding-left: 5%;
+    width: 30%;
+    font-size: 15px;
+    border-right: 1px solid white;
   }
   .nav-options {
     font-size: 14px;
     height: 100%;
     width: 100%;
-    padding-left: 20px;
+    padding-left: 10px;
   }
   .nav-options ul {
     justify-content: center;
@@ -389,27 +392,27 @@ nav {
 
   .skill-con {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border: 1px solid white;
     border-radius: 50%;
   }
 
   .skillImgBx {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
 
   .icons-circles {
     transform: rotate(calc(360deg / 6 * var(--i)));
-    transform-origin: 235px center;
+    transform-origin: 180px center;
   }
 
   .skill-content {
-    top: 100px;
-    left: 100px;
-    bottom: 100px;
-    right: 100px;
+    top: 50px;
+    left: 50px;
+    bottom: 50px;
+    right: 50px;
   }
 }
 

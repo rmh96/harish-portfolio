@@ -9,9 +9,18 @@
   left: 0;
 } */
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 /* Main Page CSS */
 
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   letter-spacing: 0.12em;
   background-color: rgb(56 189 248);
 }
@@ -310,21 +319,24 @@ nav {
 
 @media (max-width: 600px) {
   /* Adjust styles for small screens */
-  body {
-    overflow-x: hidden;
-  }
-
   #main {
     padding-bottom: 40%;
   }
   .logo {
-    display: none;
+    display: flex;
+    justify-content: start;
+    width: 20%;
+    font-size: 18px;
+    border-right: 1px solid white;
   }
   nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     padding: 0.75rem;
   }
   .nav-options {
-    font-size: 17px;
+    font-size: 18px;
     height: 100%;
     width: 100%;
   }
@@ -342,7 +354,6 @@ nav {
     margin-top: 20%;
     height: 60%;
     opacity: 0;
-    transform: translateX(-20%);
   }
 
   .card {
@@ -404,14 +415,39 @@ nav {
 
 @media (min-width: 601px) and (max-width: 900px) {
   /* Adjust styles for medium-sized screens */
-  body {
-    overflow-x: hidden;
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .skill-con {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+
+  .skillImgBx {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icons-circles {
+    transform: rotate(calc(360deg / 6 * var(--i)));
+    transform-origin: 285px center;
+  }
+
+  .skill-content {
+    top: 100px;
+    left: 100px;
+    bottom: 100px;
+    right: 100px;
   }
 }
 
 @media (min-width: 901px) {
   /* Adjust styles for larger screens */
-  body {
-    overflow-x: hidden;
-  }
 }

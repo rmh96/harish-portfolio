@@ -111,9 +111,10 @@ const cardCon = document.querySelector(".card-con");
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      entry.isIntersecting
-        ? entry.target.classList.add("bring-card-con")
-        : entry.target.classList.remove("bring-card-con");
+      if (entry.isIntersecting) {
+        entry.target.style.transform = "translateX(-20%)";
+        entry.target.classList.add("bring-card-con");
+      }
     });
   },
   { threshold: 0.5 }

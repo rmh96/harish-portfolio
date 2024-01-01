@@ -317,7 +317,103 @@ nav {
 /* ........... */
 /* Responsive Media Queries */
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+  /* Adjust styles for larger screens */
+
+  .logo {
+    display: flex;
+    justify-content: start;
+    width: 25%;
+    font-size: 16px;
+    border-right: 1px solid white;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-options {
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+  }
+  .nav-options ul {
+    justify-content: center;
+  }
+  #main-con {
+    width: 100%;
+  }
+
+  /* About Section CSS */
+
+  .card-con {
+    gap: 8px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20%;
+    height: 60%;
+    opacity: 0;
+  }
+
+  .card {
+    height: 48%;
+    width: 40%;
+    border-radius: 50px;
+    background-image: var(--imgbg);
+  }
+
+  .card:hover,
+  .card:active {
+    pointer-events: none;
+  }
+
+  .card .card-title {
+    font-size: 1.5rem;
+    writing-mode: horizontal-tb;
+    scale: 1;
+    position: absolute;
+    top: 8%;
+    left: 10%;
+  }
+
+  .card .card-content {
+    display: block;
+    font-size: 0.75rem;
+    position: absolute;
+    top: 25%;
+    padding: 0 8px 0 8px;
+  }
+
+  /* skills css mobile */
+
+  .skill-con {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+
+  .skillImgBx {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icons-circles {
+    transform: rotate(calc(360deg / 6 * var(--i)));
+    transform-origin: 235px center;
+  }
+
+  .skill-content {
+    top: 100px;
+    left: 100px;
+    bottom: 100px;
+    right: 100px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 600px) {
   /* Adjust styles for small screens */
   #main {
     padding-bottom: 40%;

@@ -310,6 +310,10 @@ nav {
 
 @media (max-width: 600px) {
   /* Adjust styles for small screens */
+  body {
+    overflow-x: hidden;
+  }
+
   #main {
     padding-bottom: 40%;
   }
@@ -374,8 +378,8 @@ nav {
 
   .skill-con {
     position: relative;
-    width: 420px;
-    height: 420px;
+    width: 400px;
+    height: 400px;
     border: 1px solid white;
     border-radius: 50%;
   }
@@ -387,7 +391,7 @@ nav {
 
   .icons-circles {
     transform: rotate(calc(360deg / 6 * var(--i)));
-    transform-origin: 245px center;
+    transform-origin: 235px center;
   }
 
   .skill-content {
@@ -400,8 +404,14 @@ nav {
 
 @media (min-width: 601px) and (max-width: 900px) {
   /* Adjust styles for medium-sized screens */
+  body {
+    overflow-x: hidden;
+  }
 }
 
 @media (min-width: 901px) {
   /* Adjust styles for larger screens */
+  body {
+    overflow-x: hidden;
+  }
 }

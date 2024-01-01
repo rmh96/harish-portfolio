@@ -136,7 +136,6 @@ imgBxs.forEach((imgBx) => {
 const skillObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      console.log(entry);
       entry.isIntersecting && entry.target.classList.add("icons-circles");
     });
   },

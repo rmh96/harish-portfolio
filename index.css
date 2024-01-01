@@ -176,6 +176,11 @@ nav {
   }
 }
 
+.social-links {
+  width: 10%;
+  height: 8%;
+}
+
 /* About Me CSS */
 
 .bring-card-con {
@@ -280,10 +285,10 @@ nav {
   background-color: white;
   position: absolute;
   overflow: hidden;
-  transition: 1s;
+  transition: 0.5s;
   z-index: 50;
   overflow: hidden;
-  filter: grayscale(0.4);
+  filter: grayscale(1);
 }
 
 .icons-circles {
@@ -360,6 +365,17 @@ nav {
   }
   #main-con {
     width: 100%;
+  }
+
+  .btn-loading:active,
+  .btn-loading:focus {
+    outline: none;
+    background-color: inherit;
+  }
+
+  .social-links {
+    width: 30%;
+    height: 8%;
   }
 
   /* About Section CSS */
@@ -478,6 +494,15 @@ nav {
   }
   #main-con {
     width: 100%;
+  }
+  .social-links {
+    width: 30%;
+    height: 8%;
+  }
+  .btn-loading:active,
+  .btn-loading:focus {
+    outline: none;
+    background-color: inherit;
   }
   /* About css */
   .card-con {

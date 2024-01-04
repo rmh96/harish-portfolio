@@ -1,33 +1,17 @@
 //Cursor Effect
-// const circles = document.querySelectorAll(".circle");
-// const coords = { x: 0, y: 0 };
 
-// circles.forEach((circle) => {
-//   circle.x = 0;
-//   circle.y = 0;
-// });
+const trailer = document.querySelector("#trailer");
 
-// const animateCursor = () => {
-//   let x = coords.x;
-//   let y = coords.y;
-
-//   circles.forEach((circle, index) => {
-//     circle.style.left = x - 12 + "px";
-//     circle.style.top = y - 12 + "px";
-//     circle.x = x;
-//     circle.y = y;
-
-//     const nextCircle = circle[index + 1] || circle[0];
-//     x += (nextCircle.x - x) * 0.3;
-//     y += (nextCircle.y - y) * 0.3;
-//   });
-// };
-
-// window.addEventListener("mousemove", (e) => {
-//   coords.x = e.clientX;
-//   coords.y = e.clientY;
-//   animateCursor();
-// });
+window.addEventListener("mousemove", (event) => {
+  const x = event.clientX - trailer.offsetWidth / 2;
+  const y = event.clientY - trailer.offsetHeight / 2;
+  const keyFrames = {
+    transform: `translate(${x}px, ${y}px)`,
+  };
+  const animation = trailer.animate(keyFrames, {
+    fill: "forwards",
+  });
+});
 
 //nav bg-color change dynamically as per section
 const nav = document.querySelector("nav");
@@ -122,17 +106,35 @@ const observer = new IntersectionObserver(
 observer.observe(cardCon);
 
 //skill section js
+let activeSkillIndex = 0;
+
 const imgBxs = document.querySelectorAll(".skillImgBx");
-imgBxs.forEach((imgBx) => {
+imgBxs.forEach((imgBx, index) => {
   imgBx.addEventListener("click", () => {
-    imgBxs.forEach((imgBxT) => {
+    imgBxs.forEach((imgBxT, index) => {
       imgBxT.classList.remove("active");
     });
     imgBx.classList.add("active");
+    activeSkillIndex = index;
     const imgBxCon = imgBx.getAttribute("data-name");
     document.querySelector(".skill-content").textContent = imgBxCon;
   });
 });
+
+function activeSkillIcons() {
+  function activeIcons() {
+    imgBxs.forEach((imgBx) => imgBx.classList.remove("active"));
+    imgBxs[activeSkillIndex].classList.add("active");
+    const imgBxCon = imgBxs[activeSkillIndex].getAttribute("data-name");
+    document.querySelector(".skill-content").textContent = imgBxCon;
+    activeSkillIndex += 1;
+    if (activeSkillIndex === imgBxs.length) {
+      activeSkillIndex = 0;
+    }
+  }
+  setInterval(activeIcons, 1000);
+}
+activeSkillIcons();
 
 const skillObserver = new IntersectionObserver(
   (entries) => {

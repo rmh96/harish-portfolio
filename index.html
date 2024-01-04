@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="keywords"
-      content="rmh, harish rm, web development, web designing, javascript, react, website, freelancer, coimbatore, india "
+      content="rmh, harish rm, Harish RM, web development, web designing, javascript, react, website, freelancer, coimbatore, india "
     />
     <meta
       name="description"
@@ -27,16 +27,7 @@
     <title>Harish | Portfolio</title>
   </head>
   <body>
-    <!-- Cursor Effect Testing
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div> -->
+    <div id="trailer"></div>
     <nav
       class="py-5 w-full flex items-center justify-between px-10 text-white text-2xl"
     >
@@ -47,7 +38,7 @@
             <a href="#skills">Skills</a>
           </li>
           <li class="border-b-0 hover:border-b border-white">
-            <a href="#exp">Experience</a>
+            <a href="#exp">Projects</a>
           </li>
           <li class="border-b-0 hover:border-b border-white">
             <a href="#about">About Me</a>
@@ -73,7 +64,7 @@
         </div>
         <button
           id="btn-loading"
-          class="opacity-0 relative text-xl mt-10 p-3 border-2 rounded-full hover:bg-white hover:text-sky-400 hover:transform hover:scale-105 transition-transform"
+          class="opacity-0 relative text-xl mt-10 p-3 border-2 rounded-full"
         >
           Download Resume
         </button>
@@ -109,7 +100,7 @@
         class="pt-20 flex flex-col justify-center items-center"
       >
         <span class="text-xl section-sub-title">Explore my core</span>
-        <div class="text-7xl section-title">Skill Sets</div>
+        <div class="text-6xl section-title">Skill Sets</div>
       </div>
       <div class="skill-con">
         <div class="skill-icons">
@@ -131,17 +122,36 @@
           <div class="skillImgBx" style="--i: 6" data-name="AJAX">
             <img src="./images/ajax2010.jpg" />
           </div>
+          <div class="skillImgBx" style="--i: 7" data-name="Redux">
+            <img src="./images/redux_original_logo_icon_146365.png" />
+          </div>
+          <div
+            class="skillImgBx"
+            style="--i: 8"
+            data-name="React Testing Library"
+          >
+            <img src="./images/react-testing-library.png" />
+          </div>
         </div>
         <div class="skill-content">JavaScript</div>
       </div>
     </div>
-    <div class="h-screen w-full bg-blue-500 text-white" id="exp">
+    <div
+      class="h-screen w-full bg-blue-500 text-white flex flex-col items-center space-y-10"
+      id="exp"
+    >
       <div
         id="about-con"
         class="pt-20 flex flex-col justify-center items-center"
       >
         <span class="text-xl section-sub-title">Browser my project</span>
-        <div class="text-7xl section-title">Experience</div>
+        <div class="text-6xl section-title">Case Studies</div>
+      </div>
+      <div class="project-con">
+        <div class="project-card">
+          <div class="project-image"></div>
+          <div class=""></div>
+        </div>
       </div>
     </div>
     <div
@@ -153,7 +163,7 @@
         class="mt-20 flex flex-col justify-center items-center"
       >
         <span class="text-xl section-sub-title">Get to know more</span>
-        <div class="text-7xl section-title">About Me</div>
+        <div class="text-6xl section-title">About Me</div>
       </div>
       <div
         class="mt-20 flex justify-center space-x-4 items-center card-con h-3/5 opacity-0"
@@ -198,6 +208,7 @@
         </div>
       </div>
     </div>
+
     <script defer type="text/javascript" src="./index.js"></script>
   </body>
 </html>

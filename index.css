@@ -1,18 +1,35 @@
-/* cursor css */
-/* .circle {
-  height: 24px;
-  width: 24px;
-  border-radius: 24px;
-  background-color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  cursor: none;
+}
+a,
+button {
+  cursor: none;
+}
+
+/* cursor trailer */
+#trailer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-radius: 20px;
+  height: 20px;
+  width: 20px;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms ease;
+  box-shadow: 0 0 12px 8px rgba(255, 255, 255, 0.7);
+}
+
+body:hover > #trailer {
+  opacity: 1;
 }
 
 /* Main Page CSS */
@@ -214,6 +231,7 @@ nav {
   position: absolute;
   top: 20%;
   left: 20%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .card:hover {
@@ -251,8 +269,9 @@ nav {
   height: 600px;
   border: 1px solid white;
   border-radius: 50%;
-  /* animation: roll 30s linear infinite; */
-  transform-style: preserve-3d;
+  /* animation: roll 30s linear infinite;
+  transform-style: preserve-3d !important;
+  z-index: 2; */
 }
 
 @keyframes roll {
@@ -287,23 +306,22 @@ nav {
   overflow: hidden;
   transition: 0.5s;
   z-index: 50;
-  overflow: hidden;
   filter: grayscale(1);
 }
 
 .icons-circles {
-  transform: rotate(calc(360deg / 6 * var(--i)));
+  transform: rotate(calc(360deg / 8 * var(--i)));
   transform-origin: 340px center;
 }
 
-.skillImgBx.active {
+.active {
   border: 5px solid blue;
   filter: grayscale(0);
 }
 
 .skillImgBx > img {
   object-fit: cover;
-  transform: rotate(calc(-360deg / 6 * var(--i)));
+  transform: rotate(calc(-360deg / 8 * var(--i)));
 }
 
 .skill-content {
@@ -319,7 +337,13 @@ nav {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  transform-style: flat;
+  /* transform-style: flat; */
+}
+
+/* Project section css*/
+.project-con {
+  width: 90%;
+  border: 1px solid;
 }
 
 /* ........... */
@@ -454,7 +478,7 @@ nav {
   }
 
   .icons-circles {
-    transform: rotate(calc(360deg / 6 * var(--i)));
+    transform: rotate(calc(360deg / 8 * var(--i)));
     transform-origin: 180px center;
   }
 
@@ -463,6 +487,7 @@ nav {
     left: 50px;
     bottom: 50px;
     right: 50px;
+    font-size: 1.2rem;
   }
 }
 
@@ -578,15 +603,16 @@ nav {
   }
 
   .icons-circles {
-    transform: rotate(calc(360deg / 6 * var(--i)));
+    transform: rotate(calc(360deg / 8 * var(--i)));
     transform-origin: 235px center;
   }
 
   .skill-content {
-    top: 100px;
-    left: 100px;
-    bottom: 100px;
-    right: 100px;
+    top: 70px;
+    left: 70px;
+    bottom: 70px;
+    right: 70px;
+    font-size: 1.2rem;
   }
 }
 
@@ -627,4 +653,8 @@ nav {
 
 @media (min-width: 901px) {
   /* Adjust styles for larger screens */
+  .btn-loading:hover {
+    background-color: white;
+    color: rgb(56 189 248);
+  }
 }

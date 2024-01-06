@@ -341,9 +341,101 @@ nav {
 }
 
 /* Project section css*/
+#exp {
+  min-height: 100vh;
+}
 .project-con {
-  width: 90%;
-  border: 1px solid;
+  height: auto;
+  width: 95%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  position: relative;
+  height: 600px;
+  width: 400px;
+  margin: 20px 0 20px 20px;
+  border: 1px solid white;
+  border-radius: 25px;
+  background: white;
+  color: black;
+  box-shadow: 0 0 6px 5px rgba(255, 255, 255, 0.6);
+}
+
+.project-img-desc {
+  position: relative;
+  height: 70%;
+  width: 100%;
+  transition: transform 0.5s linear;
+  transform-style: preserve-3d;
+  border-radius: 25px;
+}
+
+.project-img-desc:hover {
+  transform: rotateY(0.5turn);
+}
+
+.project-image,
+.project-description {
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+.project-image img {
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  height: 100%;
+  width: 100%;
+}
+
+.project-image {
+  transform: translateZ(10px);
+}
+
+.project-description {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding: 20px 10px 0 10px;
+  font-size: 1.2rem;
+  transform: rotateY(0.5turn) translateZ(1px);
+}
+
+.project-description .desc-name {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.project-tech {
+  height: 18%;
+  width: 100%;
+  padding: 25px 10px 0 10px;
+}
+
+.project-tech div:first-child {
+  font-size: 1.1rem;
+}
+
+.project-tech div:nth-child(2) {
+  font-size: 1rem;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.project-links .project-btns {
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid skyblue;
+  border-radius: 10px;
 }
 
 /* ........... */
@@ -502,6 +594,12 @@ nav {
     right: 50px;
     font-size: 1.2rem;
   }
+
+  /* projects css */
+  .project-card {
+    height: 600px;
+    width: 350px;
+  }
 }
 
 @media (min-width: 501px) and (max-width: 600px) {
@@ -640,6 +738,13 @@ nav {
     bottom: 70px;
     right: 70px;
     font-size: 1.2rem;
+  }
+
+  /* project css */
+
+  .project-card {
+    height: 600px;
+    width: 400px;
   }
 }
 

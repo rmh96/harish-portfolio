@@ -148,3 +148,43 @@ const skillObserver = new IntersectionObserver(
 imgBxs.forEach((imgBx) => {
   skillObserver.observe(imgBx);
 });
+
+// add json obj for project case studies
+
+const projectCon = document.querySelector(".project-con");
+
+//fetch all the json data and create project cards
+fetch("./projects-data.json")
+  .then((res) => res.json())
+  .then((jsonData) => {
+    //create new variable for all project cards
+    let htmlContent = "";
+    jsonData.map((data) => {
+      //add each to project card
+      htmlContent += `
+      <div class="project-card">
+      <div class="project-img-desc">
+      <div class="project-image">
+        <img src="${data.pImg}" alt="${data.imgAlt}" />
+      </div>
+      <div class="project-description">
+        <div class="desc-name">${data.name}</div>
+        <div class="desc-content">
+          ${data.description}
+        </div>
+      </div>
+    </div>
+    <div class="project-tech">
+     <div>Tech Stacks:</div>
+     <div id="techs">${data.techs}</div>
+    </div>
+    <div class="project-links">
+     <button class="project-btns" ><a href="${data.demo}" target="_blank">Live Demo</a></button>
+     <button class="project-btns"><a href="${data.code}" target="_blank">View Code</a></button>
+    </div>
+    </div>`;
+    });
+    console.log("###", htmlContent);
+    projectCon.innerHTML = htmlContent;
+  })
+  .catch((e) => console.log(e));

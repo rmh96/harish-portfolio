@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Grocery Site",
+    "pImg": "./images/grocery-cart.png",
+    "imgAlt": "grocery-cart",
+    "description": "Implemented a comprehensive grocery site featuring category navigation, detailed product pages, and a global cart for seamless shopping experience. Integrated Registration & Signin pages with validations & real-time form behaviour.",
+    "techs": "React, Redux, and Styled Components",
+    "demo": "https://rmh96.github.io/grocery-site/",
+    "code": "https://github.com/rmh96/grocery-site"
+  },
+  {
+    "id": 2,
+    "name": "Expense Split Calculator",
+    "pImg": "./images/expense-split.png",
+    "imgAlt": "expense-split",
+    "description": "Get each person's spent expenses for the group and split it according with all other expenses made by other members in the trip/tour.  Application includes a Light/Dark switch feature also.",
+    "techs": "React, Redux, and Tailwind CSS",
+    "demo": "https://rmh96.github.io/expense-split-calculator/",
+    "code": "https://github.com/rmh96/expense-split-calculator"
+  },
+  {
+    "id": 3,
+    "name": "Harish's Portfolio",
+    "pImg": "./images/portfolio.png",
+    "imgAlt": "harish-portfolio",
+    "description": "Welcome to my portfolio, a dynamic showcase crafted with vanilla JavaScript, HTML, and Tailwind CSS. Sleek animations bring my career skills and case studies to life. Explore the intersection of passion and technology in each project.",
+    "techs": "Vanilla JS, HTML, CSS, and Tailwind CSS.",
+    "demo": "https://rmh96.github.io/harish-portfolio/",
+    "code": "https://github.com/rmh96/harish-portfolio"
+  }
+]

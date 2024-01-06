@@ -63,11 +63,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 //download resume btn click dummy effect
+let animationEnded = false;
 const btnLoading = document.querySelector("#btn-loading");
 btnLoading.addEventListener("click", () => {
   btnLoading.classList.add("btn-loading");
   btnLoading.addEventListener("animationend", () => {
     btnLoading.classList.remove("btn-loading");
+    const pdfPath = "./files/Harish_RM_Frontend_UI_Developer_2024.pdf";
+    window.open(pdfPath, "_blank");
   });
 });
 
@@ -184,7 +187,6 @@ fetch("./projects-data.json")
     </div>
     </div>`;
     });
-    console.log("###", htmlContent);
     projectCon.innerHTML = htmlContent;
   })
   .catch((e) => console.log(e));

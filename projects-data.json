@@ -1,6 +1,16 @@
 [
   {
     "id": 1,
+    "name": "Youtube Clone",
+    "pImg": "./images/youtube-clone.png",
+    "imgAlt": "youtube-clone",
+    "description": "Youtube clone, advanced search bar(debouncing, with caching specs), nested commenting feature, Live chat section, and more to be added soon...",
+    "techs": "React, Redux Toolkit, and Tailwind css",
+    "demo": "https://rmh-youtube.vercel.app/",
+    "code": "https://github.com/rmh96/rmh-youtube"
+  },
+  {
+    "id": 1,
     "name": "Grocery Site",
     "pImg": "./images/grocery-cart.png",
     "imgAlt": "grocery-cart",

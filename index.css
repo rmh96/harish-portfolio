@@ -373,7 +373,7 @@ nav {
   border-radius: 25px;
 }
 
-.project-img-desc:hover {
+.reverse-card-icon:hover ~ .project-img-desc {
   transform: rotateY(0.5turn);
 }
 
@@ -603,6 +603,9 @@ nav {
     height: 530px;
     width: 340px;
   }
+  .reverse-card-icon:active ~ .project-img-desc {
+    transform: rotateY(0.5turn);
+  }
 }
 
 @media (min-width: 501px) and (max-width: 600px) {
@@ -748,6 +751,10 @@ nav {
   .project-card {
     height: 600px;
     width: 400px;
+  }
+
+  .reverse-card-icon:active ~ .project-img-desc {
+    transform: rotateY(0.5turn);
   }
 }
 

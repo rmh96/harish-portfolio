@@ -166,6 +166,9 @@ fetch("./projects-data.json")
       //add each to project card
       htmlContent += `
       <div class="project-card">
+      <div class="reverse-card-icon absolute z-10 shadow-xl top-4 right-3 h-6 w-6">
+      <img alt="reverse-icon" src="./images/reverse-icon.png" class="h-full w-full"/>
+      </div>
       <div class="project-img-desc">
       <div class="project-image">
         <img src="${data.pImg}" alt="${data.imgAlt}" />
@@ -190,3 +193,8 @@ fetch("./projects-data.json")
     projectCon.innerHTML = htmlContent;
   })
   .catch((e) => console.log(e));
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const reverseIcons = document.querySelectorAll(".reverse-card-icon");
+//   console.log("Hello", reverseIcons.length);
+// });

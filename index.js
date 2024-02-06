@@ -69,7 +69,7 @@ btnLoading.addEventListener("click", () => {
   btnLoading.classList.add("btn-loading");
   btnLoading.addEventListener("animationend", () => {
     btnLoading.classList.remove("btn-loading");
-    const pdfPath = "./files/Harish_RM_Frontend_UI_Developer_2024.pdf";
+    const pdfPath = "./files/Harish_RM_Frontend_Developer_2024.pdf";
     window.open(pdfPath, "_blank");
   });
 });

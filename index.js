@@ -180,6 +180,7 @@ fetch("./projects-data.json")
         </div>
       </div>
     </div>
+    <div class="project-main-title">${data.name}</div>
     <div class="project-tech">
      <div>Tech Stacks:</div>
      <div id="techs">${data.techs}</div>

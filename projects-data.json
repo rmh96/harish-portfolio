@@ -1,5 +1,15 @@
 [
   {
+    "id": 6,
+    "name": "Netflix UI Clone",
+    "pImg": "./images/img-netflix-clone.png",
+    "imgAlt": "netflix-clone",
+    "description": "Netflix Frontend clone with firbase auth login, react-router-dom config pages, profile section, and main movie list page.  GPT movie search is still in development...",
+    "techs": "React, Redux Toolkit, Firebase, Parcel, Tailwind CSS",
+    "demo": "https://rmh-netflixgpt.vercel.app/",
+    "code": "https://github.com/rmh96/rmh-netflixgpt"
+  },
+  {
     "id": 1,
     "name": "Youtube Clone",
     "pImg": "./images/youtube-clone.png",

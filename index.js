@@ -27,7 +27,7 @@ const getBgStyleValue = (div) => {
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
   const commonHeightOfSections = main.offsetHeight;
-
+  expBottom = exp.offsetTop + exp.offsetHeight;
   if (scrollY <= main.offsetTop + commonHeightOfSections) {
     nav.style.backgroundColor = getBgStyleValue(main);
   }
@@ -37,13 +37,13 @@ window.addEventListener("scroll", () => {
   ) {
     nav.style.backgroundColor = getBgStyleValue(skills);
   }
-  if (
-    scrollY >= exp.offsetTop - nav.offsetHeight &&
-    scrollY < exp.offsetTop + commonHeightOfSections
-  ) {
+  if (scrollY >= exp.offsetTop - nav.offsetHeight && scrollY < expBottom) {
     nav.style.backgroundColor = getBgStyleValue(exp);
   }
-  if (scrollY >= exp.offsetTop + commonHeightOfSections - nav.offsetHeight) {
+  if (
+    scrollY >=
+    exp.offsetHeight + commonHeightOfSections + skills.offsetHeight
+  ) {
     nav.style.backgroundColor = getBgStyleValue(about);
   }
 });
@@ -69,7 +69,7 @@ btnLoading.addEventListener("click", () => {
   btnLoading.classList.add("btn-loading");
   btnLoading.addEventListener("animationend", () => {
     btnLoading.classList.remove("btn-loading");
-    const pdfPath = "./files/Harish_RM_Frontend_Developer_2024.pdf";
+    const pdfPath = "./files/Harish_Frontend_Developer_Resume.pdf";
     window.open(pdfPath, "_blank");
   });
 });
